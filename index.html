@@ -1,0 +1,18 @@
+<html>
+
+<head>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.3/angular.min.js"></script>
+</head>
+
+<div data-ng-app="thisApp" data-ng-controller="myController">
+    <input type="text" data-ng-model="firstname" /> {{firstname}}
+</div>
+
+<script>
+    var thisApp = angular.module("thisApp",[]);
+    thisApp.controller("myController",function($scope){
+        
+    });
+</script>
+
+</html>
