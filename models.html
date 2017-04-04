@@ -1,0 +1,14 @@
+<html>
+
+<head>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.3/angular.min.js"></script>
+</head>
+<form data-ng-app="modelDirectiveApp" name="myForm">
+    Email: <input type="email" name="userEmail" id="userEmail" data-ng-model="text" />
+    <span data-ng-show="myForm.userEmail.$error.email">Not cool!! tha ain't valid!!</span>
+</form>
+<script>
+    var myApp = angular.module("modelDirectiveApp",[]);
+</script>
+
+</html>

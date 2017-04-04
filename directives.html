@@ -1,0 +1,25 @@
+<html>
+
+<head>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.3/angular.min.js"></script>
+</head>
+
+<body>
+    <div data-ng-app="myApp" data-ng-controller="myCtrl">
+    </div>
+    <script>
+        var app = angular.module('myApp', []);
+        app.controller('myCtrl', function ($scope, $http) {
+            $http({
+                method: "GET",
+                url: "http://localhost:8080/IngramHelloServices/webapi/myresource/withoutcors"
+            }).then(function mySucces(response) {
+               console.log(response.data.samplee);
+            }, function myError(response) {
+                console.log(response);
+            });
+        });
+    </script>
+</body>
+
+</html>
